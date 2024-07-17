@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "",
   "author": "0xfiraterdem",
-  "private": true,
   "license": "MIT",
   "scripts": {
     "build": "nest build && mkdir -p dist/config && cp src/config/config.json dist/config/",
