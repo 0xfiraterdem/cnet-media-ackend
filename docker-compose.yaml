@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  devnet-backend:
+    build:
+      context: .
+      args:
+        NODE_ENV: devnet
+    environment:
+      NODE_ENV: devnet
+    ports:
+      - '3001:3000'
+    command: yarn start:devnet
+
+  mainnet-backend:
+    build:
+      context: .
+      args:
+        NODE_ENV: mainnet
+    environment:
+      NODE_ENV: mainnet
+    ports:
+      - '3000:3000'
+    command: yarn start:mainnet
+
+  testnet-backend:
+    build:
+      context: .
+      args:
+        NODE_ENV: testnet
+    environment:
+      NODE_ENV: testnet
+    ports:
+      - '3002:3000'
+    command: yarn start:testnet
