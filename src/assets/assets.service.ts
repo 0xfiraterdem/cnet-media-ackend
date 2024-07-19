@@ -18,4 +18,13 @@ export class AssetsService {
   getImageUrl(tokenIdentifier: string, name: string): string {
     return `${this.repoUrl.replace('github.com', 'raw.githubusercontent.com').replace('/tree', '')}/main/${this.network}/tokens/${tokenIdentifier}/${name}`;
   }
+
+  // NFT
+  getNftAssetDetailsUrl(cid: string, fileName: string): string {
+    return `/nfts/asset/${cid}/${fileName}.json`;
+  }
+
+  getNftImageUrl(cid: string, fileName: string): string {
+    return `/nfts/asset/${cid}/${fileName}.webp`;
+  }
 }
